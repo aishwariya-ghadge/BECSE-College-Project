@@ -1,0 +1,21 @@
+<ion-view view-title="Check Attendance">
+  <ion-content class="padding">
+    <h3>Check Attendance</h3>
+    <div class="list">
+         <div class="item item-icon-left">
+            <i class="icon ion-calendar"></i>
+            {{attend_info.date | date}}
+          </div>  
+          <div class="item item-icon-left">
+            <i class="icon ion-clock"></i>
+            {{attend_info.in_time}}
+          </div>
+          <div class="item item-icon-left">
+            <i class="icon ion-clock"></i>
+            {{attend_info.out_time}}
+          </div>
+    </div>
+    <button class="button button-block button-balanced" ng-click="updateOuttime();">Update Out Time</button>
+    <button class="button button-block button-balanced" ng-click="getAttend_info();">Refresh</button>
+  </ion-content>
+</ion-view>

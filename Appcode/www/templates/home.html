@@ -1,0 +1,56 @@
+<ion-view view-title="Home">
+  <ion-content class="">
+    
+    <ion-slide-box slide-interval="3000">
+      <ion-slide>
+        <img class="custom-class slide_img" ng-src="img/slide1.jpg"/>
+      </ion-slide>
+       <ion-slide>
+        <img class="custom-class slide_img" ng-src="img/slide2.jpg"/>
+      </ion-slide>
+    </ion-slide-box>
+    
+    <div class="row padding0 margin0">
+        <div class="col col-50 margin0 padding0">
+            <a class="col-demo margin0 item border_radius0 centered button button-block button-balanced white" href="#/app/attendance" >
+                <i class="icon ion-clock block"></i>
+                <span class="white light">Attendance</span>
+            </a>
+        </div>
+        <div class="col col-50 margin0 padding0">
+            <a class="col-demo margin0 item border_radius0 centered button button-block button-royal white" href="#/app/makeattendance" >
+                <i class="icon ion-clock block"></i>
+                <span class="white light">Check Attendance</span>
+            </a>
+        </div>
+    </div>
+    <div class="row padding0 margin0">
+        <div class="col col-50 margin0 padding0">
+            <a class="col-demo margin0 item border_radius0 centered button button-block button-royal white" href="#/app/notice" >
+                <i class="icon ion-paper-airplane block"></i>
+                <span class="white light">Notice</span>
+            </a>
+        </div>
+        <div class="col col-50 margin0 padding0">
+            <a class="col-demo margin0 item border_radius0 centered button button-block button-balanced white" href="#/app/officeduty" >
+                <i class="icon ion-briefcase block"></i>
+                <span class="white light">Office Duty</span>
+            </a>
+        </div>
+    </div>
+    <div class="row padding0 margin0">
+        <div class="col col-50 margin0 padding0">
+            <a class="col-demo margin0 item border_radius0 centered button button-block button-balanced white" href="#/app/editprofile" >
+                <i class="icon ion-person block"></i>
+                <span class="white light">Edit Profile</span>
+            </a>
+        </div>
+        <div class="col col-50 margin0 padding0">
+            <a class="col-demo margin0 item border_radius0 centered button button-block button-royal white" ng-click="logout()">
+                <i class="icon ion-log-out block"></i>
+                <span class="white light">Logout</span>
+            </a>
+        </div>
+    </div>
+  </ion-content>
+</ion-view>

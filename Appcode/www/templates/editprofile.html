@@ -1,0 +1,54 @@
+<ion-view view-title="Edit Profile">
+<ion-header-bar class="bar bar-balanced">
+    <h1 class="title">Edit Profile</h1>
+</ion-header-bar>
+<ion-content>
+<form id="edit_form" name="edit_form">
+  <div class="list">
+    <label class="item item-input">
+      <input type="text" ng-model="data.name" placeholder="Name"/>
+    </label>
+    <label class="item item-input">
+      <input type="text" ng-model="data.email" placeholder="Email"/>
+    </label>
+    <label class="item item-input">
+      <input type="text" ng-model="data.mobile" placeholder="Mobile"/>
+    </label>
+    <label class="item item-input">
+      <input type="text" ng-model="data.address" placeholder="Address"/>
+    </label>
+    <label class="item item-input item-select">
+        <div class="input-label">
+          Branch
+        </div>
+        <select ng-model="data.branch">
+            <option value="1">Computer Sci & engg</option>
+            <option value="2">Civil engg</option>
+            <option value="3">Mechanical engg</option>
+            <option value="4">E & TC engg</option>
+            <option value="5">Electrical engg</option>
+        </select>
+    </label>
+    <label class="item item-input item-select">
+        <div class="input-label">
+          Designation
+        </div>
+        <select ng-model="data.designation">
+            <option value="Principal">Principal</option>
+            <option value="HOD">HOD</option>
+            <option value="Professor">Professor</option>
+        </select>
+    </label>
+    <label class="item item-input">
+      <input type="text" ng-model="data.username" placeholder="User Name"/>
+    </label>
+    <label class="item item-input">
+      <input type="password" ng-model="data.password" placeholder="Password"/>
+    </label>
+    <label class="item">
+      <button class="button button-block button-balanced" ng-click="editprofile()">Edit Profile</button>
+    </label>
+  </div>
+</form>
+</ion-content>
+</ion-view>

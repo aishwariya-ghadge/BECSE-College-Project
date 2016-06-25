@@ -1,0 +1,53 @@
+<ion-view view-title="Login">
+<ion-header-bar class="bar bar-balanced">
+    <h1 class="title">Login</h1>
+</ion-header-bar>
+<ion-content>
+<form id="log_form" name="log_form">
+  <div class="list">
+    
+    <label class="item item-input">
+      <!--<span class="input-label">Username</span>-->
+      <input type="text" ng-model="data.username" placeholder="User Name"/>
+    </label>
+    <label class="item item-input">
+      <!--<span class="input-label">Password</span>-->
+      <input type="password" ng-model="data.password" placeholder="Password"/>
+    </label>
+    <label class="item">
+      <input type="hidden" id="mac" name="mac" />  
+      <button class="button button-block button-balanced" ng-click="login();">Log in</button>
+    </label>
+    <div  class="item">
+        <a class="button button-block button-balanced" ng-href="#/register">Register</a>
+    </div>
+  </div>
+</form>
+<script type="text/javascript">
+    function calldialog() {
+        document.addEventListener("deviceready",function() {
+            cordova.dialogGPS("Your GPS is Disabled, this app needs to be enable to works.",//message
+                "Use GPS, with wifi or 3G.",//description
+                function(buttonIndex){//callback
+                  switch(buttonIndex) {
+                    case 0: break;//cancel
+                    case 1: break;//neutro option
+                    case 2: break;//user go to configuration
+                  }},
+                  "Please Turn on GPS",//title
+                  ["Cancel","Later","Go"]);//buttons
+            });
+    }
+    calldialog();
+</script>
+<script type="text/javascript">
+function getMacAddressNLogin()
+{
+    if(window.MacAddress != undefined)
+    {
+        window.MacAddress.getMacAddress(function(macAddress){/*alert(macAddress);*/$("#mac").val(macAddress);login();/*return macAddress;*/ },function(fail){});
+    }
+}
+</script>
+</ion-content>
+</ion-view>
